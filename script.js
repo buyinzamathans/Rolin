@@ -71,7 +71,7 @@ nextBtn.addEventListener('click', () => {
     step3.classList.remove('hidden');
 });
 
-// --- Final Step: Tomorrow's Time ---
+// --- Final Step: Send to WhatsApp ---
 setDateBtn.addEventListener('click', () => {
     const selectedTime = document.getElementById('time-picker').value;
     
@@ -80,6 +80,12 @@ setDateBtn.addEventListener('click', () => {
         return;
     }
     
-    // We will build the Food Menu and Contract in the final phase
-    alert(`Tomorrow at ${selectedTime} it is! Ready for the Food Menu...`);
+    // Your Ugandan WhatsApp number with the 256 country code
+    const phoneNumber = "256789537954";
+    
+    // Craft the custom message
+    const message = encodeURIComponent(`I accept the terms! See you tomorrow at ${selectedTime}. 🍔 Food on you, 🚕 Transport on me, 📍 Your room, 💨 Smoke all day.`);
+    
+    // Redirect straight to your WhatsApp chat with the pre-filled message
+    window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
 });
