@@ -71,16 +71,15 @@ nextBtn.addEventListener('click', () => {
     step3.classList.remove('hidden');
 });
 
-// Preparing for the final phase
+// --- Final Step: Tomorrow's Time ---
 setDateBtn.addEventListener('click', () => {
-    const selectedDate = document.getElementById('date-picker').value;
     const selectedTime = document.getElementById('time-picker').value;
     
-    if(!selectedDate || !selectedTime) {
-        alert("Please pick a date and time!");
+    if(!selectedTime) {
+        alert("Don't leave me hanging, pick a time!");
         return;
     }
     
     // We will build the Food Menu and Contract in the final phase
-    alert(`Date set for ${selectedDate} at ${selectedTime}. Ready for the Food Menu!`);
+    alert(`Tomorrow at ${selectedTime} it is! Ready for the Food Menu...`);
 });
