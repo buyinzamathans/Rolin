@@ -1,0 +1,79 @@
+/* --- 1. The Global Setup --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- 2. The Background (The Canvas) --- */
+body {
+    background-color: #fce4ec; /* A very soft pink */
+    height: 100vh; /* Takes up 100% of the viewport height */
+    display: flex;
+    justify-content: center; /* Centers the card horizontally */
+    align-items: center; /* Centers the card vertically */
+}
+
+/* --- 3. The Main Card --- */
+.card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px; /* Rounds the corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Adds a soft drop shadow */
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* --- 4. The Profile Picture --- */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image a perfect circle */
+    object-fit: cover; /* Ensures the photo doesn't stretch or distort */
+    border: 4px solid #f8bbd0; /* Adds a nice pink ring around her photo */
+    margin-bottom: 20px;
+}
+
+/* --- 5. The Text --- */
+h1 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* --- 6. The Button Container & Base Buttons --- */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Puts space between the Yes and No buttons */
+    position: relative; /* Crucial for the dodging effect later */
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Makes hover effects smooth */
+}
+
+/* --- 7. Button Specifics --- */
+.yes-btn {
+    background-color: #ff4081; /* A vibrant pink */
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
+}
+
+.yes-btn:hover {
+    transform: scale(1.05); /* Makes the Yes button grow slightly when hovered */
+}
+
+.no-btn {
+    background-color: #e0e0e0;
+    color: #555;
+    position: relative; /* Prepping for Phase 3 */
+}
